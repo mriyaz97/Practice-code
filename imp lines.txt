@@ -1,0 +1,12 @@
+ fptr.write('\n'.join(map(str, result)))
+ 
+ print(sum([1 for x in apple if (x + a) >= s and (x + a) <= t]))
+print(sum([1 for x in orange if (x + b) >= s and (x + b) <= t]))
+
+print(sum(s <= a + d <= t for d in apples))
+print(sum(s <= b + d <= t for d in oranges))
+
+return 'YES' if (v1 > v2) and (x2 - x1) % (v2 - v1) == 0 else 'NO'
+return (sum(1 for x in range(i,j+1) if (x - int(str(x)[::-1]))%k ==0))
+
+bill = list(map(int, input().rstrip().split()))

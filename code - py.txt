@@ -1,0 +1,32 @@
+#clock conversion 
+a = '07:05:45PM'
+b = list(a.split(":"))
+c = ''.join(i for i in b[-1] if not i.isdigit())
+b.append(c)
+b[-2] = ''.join(i for i in b[-2] if i.isdigit())
+print(b)
+if b[-1] == 'PM':
+    if b[0] == '12':
+        b[0] == '12'
+    else:
+        b[0] = str(int(b[0]) + 12)
+elif b[-1] =='AM' and b[0] == '12':
+    b[0] = '00'
+
+print(b)
+b.pop(-1)
+l = ':'.join(b)
+print(l)
+
+
+#string separation 
+a = '45PM'
+c = ''
+d = ''
+for i in a:
+    if i.isdigit():
+        c += str(i)
+    else:
+        d += i
+print(c)
+print(d)
