@@ -69,5 +69,3 @@ if actions>=0:
     print("Yes")
 else:
     print("No")
-
-hai how 
