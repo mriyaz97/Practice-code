@@ -1,4 +1,5 @@
-#https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem
+1]
+##https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem     ---- getting time out error
 ranked_count = int(input().strip())
 ranked = list(map(int, input().rstrip().split()))
 player_count = int(input().strip())
@@ -12,3 +13,31 @@ for i in player:
         if i < j:
             rank +=1
     print(rank)
+
+2]
+## https://www.hackerrank.com/challenges/append-and-delete/problem     ------ some error in question I think 
+
+first_str = input()
+second_str =input()
+actions = int(input())
+
+first_list = list(first_str)
+second_list =  list(second_str)
+actual_list = []
+
+for i in range(min(len(first_list),len(second_list))):
+    if first_list[i]==second_list[i]:
+        actual_list.append(first_list[i])
+    elif first_list[i]!=second_list[i]:
+        break
+
+actions -= (len(first_list)-len(actual_list))
+
+for i in range(len(actual_list),len(second_list)):
+    actual_list.append(second_list[i])
+    actions -=1
+
+if actions>=0:
+    print("Yes")
+else:
+    print("No")
